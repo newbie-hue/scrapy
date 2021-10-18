@@ -33,16 +33,15 @@ scrapy/scrapy_redis...
 				  
 
 2、crawlspider  的使用
+
+
     创建
         circ文件的
         scrapy startproject 项目名
         cd 项目名
         scrapy genspider -t crawl 爬虫名 域名
 
-
-
     CrawlSpider  circ因为网站的关闭，现在呈现的为逻辑
-
 
     rule 链接提取器(会自动的补全不完整的href)  （正则或者xpath提取）
             allow（正则）满足的被抓取
@@ -50,7 +49,6 @@ scrapy/scrapy_redis...
             allow_domains:响应会被提取的域名
             deny_domains:不会被提取的域名
             restrict_xpaths:和allow共同作用，满足的会被提取
-
 
         callback
             这个链接的解析函数
@@ -67,14 +65,17 @@ scrapy/scrapy_redis...
 
 
 
-
 3、异步的协程框架注意点：suning_book
+
+
     1、内存共享问题    在爬取suning_book的时候，有大分类、小分类、页面详情    在传递item的时候  因为是异步的框架前面的会改变item里面的内容，
                     其实也就是说item传递的是spider中对应的内容   但是被改变了  如果想实现对应，那么就将其进行deepcopy
     2、js生成的问题   通过js解决
 
 
 4、scrapy_redis
+
+
         强大的地方    1、request去重  帮助持久化的去重   实现增量式爬虫
                     2、爬虫持久化
                     3、轻松实现分布式
@@ -140,6 +141,8 @@ scrapy/scrapy_redis...
 
 
 5、分布式爬虫
+
+
         1、spider
             1、allowed_domains  的问题。因为是从scrapy中建立起来的，所以就没有
                 def __init__(self)
