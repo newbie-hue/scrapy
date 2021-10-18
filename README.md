@@ -20,18 +20,21 @@ scrapy/scrapy_redis...
 					print("".join(list(a)))
 
 			2、随机的ua
-					request.headers["User_Agent"] = ''
+				request.headers["User_Agent"] = ''
 			3、代理
-					request.meta['proxy'] = ''
+				request.meta['proxy'] = ''
 			4、cookies的登录：（cookie放到headers中不能自己构造的cookie,但是可以使用settings中的cookies）
-						request(cookies放入headers,cookies作为参数、session、selenium)
-						1、start_request中的yield scrapy.Request(......cookies=cookies)  //COOKIES_ENABLED = True
-						2、headers  settings中的设置
+				request(cookies放入headers,cookies作为参数、session、selenium)
+				1、start_request中的yield scrapy.Request(......cookies=cookies)  //COOKIES_ENABLED = True
+				2、headers  settings中的设置
 			5、post请求
-						1、源码网页中有form表单，那么可以在scrapy.FormRequest.form_response(.....formdata={账号的name标签：账号。密码的name标签：密码})   不常用
-						2、直接构造表单。post_data   在scrapy.FormRequest(.....formdata=post_data)
-						3、scrapy.Request(url,method = 'POST',body=post_data)
-			6、爬虫的去重  （在当前的爬虫会进行去重）
+				1、源码网页中有form表单，那么可以
+					scrapy.FormRequest.form_response(.....formdata={账号的name标签：账号。密码的name标签：密码})
+					不常用
+				2、直接构造表单。
+					post_data   在scrapy.FormRequest(.....formdata=post_data)
+				3、scrapy.Request(url,method = 'POST',body=post_data)
+			6、爬虫的去重 在当前的爬虫会进行去重）
 				  
 
 2、crawlspider  的使用
@@ -57,9 +60,11 @@ scrapy/scrapy_redis...
         folow 默认为False
             提取之后的链接进行请求，是否还进行同样的提取
         process_links:
-            指定该spider中的哪个函数会被调用，从link_extractor中获取到链接列表的时候会调用该函数（只要用来过滤url和去重）
+            指定该spider中的哪个函数会被调用，
+			从link_extractor中获取到链接列表的时候会调用该函数（只要用来过滤url和去重）
         process_request:
-            指定该spider中的哪个函数会被调用，该规则提取到每个request的时候都会调用该函数。(用来过滤resuest)
+            指定该spider中的哪个函数会被调用，
+			该规则提取到每个request的时候都会调用该函数。(用来过滤resuest)
 
     注意点：
         通过 -t crawl进行创建
@@ -70,9 +75,12 @@ scrapy/scrapy_redis...
 3、异步的协程框架注意点：suning_book
 
 
-    1、内存共享问题    在爬取suning_book的时候，有大分类、小分类、页面详情    在传递item的时候  因为是异步的框架前面的会改变item里面的内容，
-                    其实也就是说item传递的是spider中对应的内容   但是被改变了  如果想实现对应，那么就将其进行deepcopy
+    1、内存共享问题    在爬取suning_book的时候，有大分类、小分类、页面详情    
+						在传递item的时候  因为是异步的框架前面的会改变item里面的内容，
+						其实也就是说item传递的是spider中对应的内容   但是被改变了  
+						如果想实现对应，那么就将其进行deepcopy
     2、js生成的问题   通过js解决
+	3、ajax  抓包分析
 
 
 4、scrapy_redis
@@ -111,16 +119,20 @@ scrapy/scrapy_redis...
                     REDIS_HOST = '127.0.0.1'
                     REDIS_PORT = '6379'
             源码解读（scrapy_redis）
-                piplines  进行持久化储存的地方 _process_item
-                dupefilter  通过request特征去重生成指纹
-                                默认通过sha1 request.method\request.url\request.body or b''\(include_headers)
-                                request_fingerprint
+                piplines  
+					进行持久化储存的地方 _process_item
+                dupefilter  
+						通过request特征去重生成指纹
+						默认通过sha1 request.method\request.url\request.body or b''\(include_headers)
+						request_fingerprint
                 scheduler
-                        close方法   如果不持久化存储的话，爬虫停止时就清空指纹等内容
-                        enqueue_request方法  如果not request.dont_filter and self.df.request_seen(request) 就不如队列
-                                            否则就 进入队列
-                                            或者  在Request对象中设置   dont_filter  = True ，那么就不会请求去重（用于更新）
-                                            和scrapy的相同   url在start_url的时候，不管之前是否存在，都会入队。
+                        close方法   
+							如果不持久化存储的话，爬虫停止时就清空指纹等内容
+                        enqueue_request方法  
+							如果not request.dont_filter and self.df.request_seen(request) 就不如队列
+							否则就 进入队列
+							或者  在Request对象中设置   dont_filter  = True ，那么就不会请求去重（用于更新）
+							和scrapy的相同   url在start_url的时候，不管之前是否存在，都会入队。
                         使用sadd添加指纹 根据返回值来判断是否入队。
 
         可以由scrapy改造而来
