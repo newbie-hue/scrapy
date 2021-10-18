@@ -6,29 +6,31 @@ scrapy/scrapy_redis...
 
 
 1、scrapy_spider
-    腾信视频的实现了           多线程、日志  等基本的使用方式
-    糗事百科实现了             1、持久化存储
-                                    mysql/mongdb/本地
-                                    数据的清洗  re.sub()   \ .strip()   \"".join()  lambda  strip()  join()
-                                            import re
-                                            ex_list = ['\3','\3',' ','mklmlkm']
-                                            a = filter(lambda x:re.sub("\3",'',x).strip(),ex_list)
-                                            print("".join(list(a)))
+    腾信视频       
+				多线程、日志  等基本的使用方式
+	糗事百科  
+			1、持久化存储
+				mysql/mongdb/本地
+				数据的清洗  re.sub()   \ .strip()   \"".join()  lambda  strip()  join()
+					import re
+					ex_list = ['\3','\3',' ','mklmlkm']
+					a = filter(lambda x:re.sub("\3",'',x).strip(),ex_list)
+					print("".join(list(a)))
 
-                            2、随机的ua
-                                    request.headers["User_Agent"] = ''
-                            3、代理
-                                    request.meta['proxy'] = ''
-                            4、cookies的登录：（cookie放到headers中不能自己构造的cookie,但是可以使用settings中的cookies）
-                                        request(cookies放入headers,cookies作为参数、session、selenium)
-                                        1、start_request中的yield scrapy.Request(......cookies=cookies)  //COOKIES_ENABLED = True
-                                        2、headers  settings中的设置
-                            5、post请求
-                                        1、源码网页中有form表单，那么可以在scrapy.FormRequest.form_response(.....formdata={账号的name标签：账号。密码的name标签：密码})   不常用
-                                        2、直接构造表单。post_data   在scrapy.FormRequest(.....formdata=post_data)
-                                        3、scrapy.Request(url,method = 'POST',body=post_data)
-                            6、爬虫的去重  （在当前的爬虫会进行屈从）
-                                  打开了一个恩建
+			2、随机的ua
+					request.headers["User_Agent"] = ''
+			3、代理
+					request.meta['proxy'] = ''
+			4、cookies的登录：（cookie放到headers中不能自己构造的cookie,但是可以使用settings中的cookies）
+						request(cookies放入headers,cookies作为参数、session、selenium)
+						1、start_request中的yield scrapy.Request(......cookies=cookies)  //COOKIES_ENABLED = True
+						2、headers  settings中的设置
+			5、post请求
+						1、源码网页中有form表单，那么可以在scrapy.FormRequest.form_response(.....formdata={账号的name标签：账号。密码的name标签：密码})   不常用
+						2、直接构造表单。post_data   在scrapy.FormRequest(.....formdata=post_data)
+						3、scrapy.Request(url,method = 'POST',body=post_data)
+			6、爬虫的去重  （在当前的爬虫会进行去重）
+				  
 
 2、crawlspider  的使用
     创建
