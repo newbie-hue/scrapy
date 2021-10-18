@@ -1,0 +1,109 @@
+2021-10-15 03:48:55 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: qiubai)
+2021-10-15 03:48:55 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:57:54) [MSC v.1924 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2021-10-15 03:48:55 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2021-10-15 03:48:55 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'qiubai',
+ 'DOWNLOAD_DELAY': 1,
+ 'LOG_FILE': 'my.log',
+ 'NEWSPIDER_MODULE': 'qiubai.spiders',
+ 'SPIDER_MODULES': ['qiubai.spiders']}
+2021-10-15 03:48:55 [scrapy.extensions.telnet] INFO: Telnet Password: a28847628863a696
+2021-10-15 03:48:55 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-10-15 03:48:56 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qiubai.middlewares.RandomUserAgentMidleware',
+ 'qiubai.middlewares.CheckUserAgent',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-10-15 03:48:56 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-10-15 03:48:56 [scrapy.middleware] INFO: Enabled item pipelines:
+['qiubai.pipelines.QiubaiPipeline']
+2021-10-15 03:48:56 [scrapy.core.engine] INFO: Spider opened
+2021-10-15 03:48:56 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-10-15 03:48:56 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-10-15 03:48:56 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.qiushibaike.com/> from <GET http://www.qiushibaike.com/>
+2021-10-15 03:48:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qiushibaike.com/> (referer: None)
+2021-10-15 03:48:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qiushibaike.com/text/page/2/> (referer: https://www.qiushibaike.com/)
+2021-10-15 03:48:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '“我们结婚吧”', 'content': '刚才儿子给我弹了个视频，一接上就说“'}
+2021-10-15 03:48:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '吃了两碗又盛', 'content': '我劝朋友走路时候不要看手机，她说:没关系，我走盲道。'}
+2021-10-15 03:48:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '挖鼻孔的老虎',
+ 'content': '中秋假期结束，第一天上班不怎么忙，看到老板娘在玩塔罗牌，我问这东西有什么用？她说可以预测未来。'}
+2021-10-15 03:48:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '易迎',
+ 'content': '以前我们村来了表演杂技的，印象最深的是胸口碎大石，当时村里的有个恶霸对表演不屑，觉得没什么了不起的，自己非要亲自去试试，拆杂技团的台，他自是很聪明的要求换小石头，一锤子落下去，他被救护车抬走了！！！'}
+2021-10-15 03:48:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': 'Alone°祝英台…',
+ 'content': '我哥电动车买来第二天， 被偷了 ，查了监控 ，还是他自己给小偷指的路出去， 哈哈哈 。。。他说新车不记得什么样子。。。'}
+2021-10-15 03:48:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '深秋的香樟树',
+ 'content': '去姐姐家做客小外甥可热情了，我说姨不渴，砰的一声就给我开了一瓶饮料，然后就是他姥爷.姥姥，就是所有的大人人手一瓶，唯独就是不给小孩子开[大笑]（也包括他自己）'}
+2021-10-15 03:48:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '胖香',
+ 'content': '娃儿前段时间被狗咬了，最近突然想起来交农村合作医疗的时候，绑了一个50块的意外险，兴冲冲的开车去了市保险公司'}
+2021-10-15 03:48:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '老鼠拎刀找猫', 'content': '以前工作时，有个生产线的小男孩，是那种比较有个性的那种，喜欢找我聊天'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '手鐲啟瓶器',
+ 'content': '小时候都爱吹泡泡糖，我们圈子我最厉害，每次都偷偷嚼三个，每次都是我吹的最大。有次偷偷嚼了四个泡泡糖，众目睽睽之下吹了一个超大的泡泡，然后，泡泡炸开，把我整个头反包住了，正在我准备小心翼翼地把泡泡皮摘下来的时候，不知道是谁抱住我的脑袋，猛的一阵揉……第二天，摸着亮堂堂的光头，我学会了低调。'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '鱼小小真漂亮', 'content': '中午一个人在家，有些无聊，不想做饭就点了份外卖……'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '上凹下凸', 'content': '五岁的小侄女说她长大了想当一名医生，我问她：如果我牙疼该怎么办呢？'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '(糗名昭著)~魅儿…',
+ 'content': '到了婚嫁的年龄，整天纠结是买房好还是租.房好，昨天跟医院的保洁阿姨聊起这事，她考虑了一会说，讲实话哈，个人觉得还是租.房好，没有房.贷压力，虽然现在房价不怎么涨了，但银.行.利.息还是高的吓人，首.付也得要好多钱不是？租.房还不用考虑房间布置、装修风格、房屋格局、地理位置好不好等等一系列的问题，而且现在房.租涨的也有限，我市中心的6套房子已经半年没涨他们房.租了。'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '歌歌哒f',
+ 'content': '小时候一犯错就会被父母骂，直到有天我看见也是经常犯错的一个小伙伴，但他却从来没被骂过，原因是他把责任都推给他弟弟了，'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '猪头小小败',
+ 'content': '男人果然是差不多的。我问我老公有钱了会不会花心。他说等我有了一个亿，我就找两个二奶。我说好吧，那我放心了。'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '陈一默', 'content': '单位聚餐，结束时，经理让我送女同事回去。'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '唐僧熟了',
+ 'content': '侄子生日请了四个女同学，问他这四位里谁是你女朋友，侄子嘴一撇：四个我都喜欢，可惜她们不喜欢我。那怎么把四个都请来了？侄子嘿嘿一乐：我要故意厚此薄彼，让她们互相猜忌，争取拿下一个。'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '无书斋主', 'content': '我的老家在湘西大山中……'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '正版煮茶',
+ 'content': '和表弟在公园散步，表弟说他在同龄人中找不到女朋友。   '
+            '旁边一个大妈抱着她孙女，和大爷一起散步。大妈插嘴说：小兄弟你何必在同龄人中找？你愿意等等吗？。说完又颠了几下小孙女。'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '夏小夏~', 'content': '在闺蜜家喝了几瓶啤酒，横着走路回到了家。'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '喜欢就是淡淡滴爱', 'content': '作为一个过来人，我给年轻人的建议是：别过来。'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '上凹下凸', 'content': '表弟去新东方学成归来，主动下厨……'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '鱼小小真漂亮', 'content': '一大早，老妈就把我从床上拉起来，催我洗脸刷牙打扮一番，说要去相亲！'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '歌歌哒f',
+ 'content': '做客的时候我去的最迟，到的时候他们已经开吃了，我连忙坐下，正当我拿起筷子时突然有人对我说道：你筷子还没用，借我们分一下菜，我看了看手里的筷子然后递了过去，等到他分完菜递还给我时只见他习惯性的把筷子放嘴里嗦了一下……'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '歌歌哒f',
+ 'content': '媳妇平时对女儿的管教比较严，导致女儿有些怕她，今天同事结婚我带着女儿想让她去散散心，出门时对女儿说道：遇到年轻一点的男的喊哥哥，女的喊姐姐，年纪大一点的男的喊叔叔，女的喊阿姨，如果是脸上有皱纹和满头白发的就喊爷爷或奶奶，知道不？……'}
+2021-10-15 03:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qiushibaike.com/text/page/2/>
+{'author': '无书斋主', 'content': '昨天，老婆的闺蜜来长沙旅游，晚上住我家！'}
+2021-10-15 03:48:59 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2021-10-15 03:48:59 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2021-10-15 03:48:59 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown

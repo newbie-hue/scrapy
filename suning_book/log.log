@@ -1,0 +1,737 @@
+2021-07-04 20:50:18 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: suning_book)
+2021-07-04 20:50:18 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:57:54) [MSC v.1924 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2021-07-04 20:50:18 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'suning_book',
+ 'DOWNLOAD_DELAY': 1,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'suning_book.spiders',
+ 'SPIDER_MODULES': ['suning_book.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'}
+2021-07-04 20:50:18 [scrapy.extensions.telnet] INFO: Telnet Password: 9b341892635ca06a
+2021-07-04 20:50:18 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-07-04 20:50:18 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-07-04 20:50:18 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-07-04 20:50:18 [scrapy.middleware] INFO: Enabled item pipelines:
+['suning_book.pipelines.SuningBookPipeline']
+2021-07-04 20:50:18 [scrapy.core.engine] INFO: Spider opened
+2021-07-04 20:50:18 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 20:50:18 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-07-04 20:50:40 [scrapy.core.scraper] ERROR: Spider error processing <GET https://product.suning.com/0070504352/121054546.html> (referer: https://list.suning.com/1-502326-0.html)
+Traceback (most recent call last):
+  File "c:\python\python38\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "c:\python\python38\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "c:\python\python38\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\sunshine\PycharmProjects\untitled1\suning_book\suning_book\spiders\suningbook.py", line 71, in parser_detail
+    partNumber=re.findall('\"partNumber\":\"(.*?)\"',url_text,re.S)[0]
+IndexError: list index out of range
+2021-07-04 20:50:43 [scrapy.core.scraper] ERROR: Spider error processing <GET https://product.suning.com/0070153176/109234123.html> (referer: https://list.suning.com/1-502799-0.html)
+Traceback (most recent call last):
+  File "c:\python\python38\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "c:\python\python38\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "c:\python\python38\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\sunshine\PycharmProjects\untitled1\suning_book\suning_book\spiders\suningbook.py", line 71, in parser_detail
+    partNumber=re.findall('\"partNumber\":\"(.*?)\"',url_text,re.S)[0]
+IndexError: list index out of range
+2021-07-04 20:50:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502324-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:50:44 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502317-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:50:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502320-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:50:47 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502341-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:50:47 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503087-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:50:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502890-0-0-0-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:50:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502326-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:50:51 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502298-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:50:53 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502799-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:50:53 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502322-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:50:55 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502312-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:50:56 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502307-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:50:58 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502329-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:50:59 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502327-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:51:18 [scrapy.extensions.logstats] INFO: Crawled 71 pages (at 71 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 20:52:18 [scrapy.extensions.logstats] INFO: Crawled 121 pages (at 50 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 20:52:41 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2021-07-04 20:52:41 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2021-07-04 20:52:41 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2021-07-04 20:53:34 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: suning_book)
+2021-07-04 20:53:34 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:57:54) [MSC v.1924 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2021-07-04 20:53:34 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'suning_book',
+ 'DOWNLOAD_DELAY': 1,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'suning_book.spiders',
+ 'SPIDER_MODULES': ['suning_book.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'}
+2021-07-04 20:53:34 [scrapy.extensions.telnet] INFO: Telnet Password: a99591176c325137
+2021-07-04 20:53:34 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-07-04 20:53:34 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-07-04 20:53:34 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-07-04 20:53:34 [scrapy.middleware] INFO: Enabled item pipelines:
+['suning_book.pipelines.SuningBookPipeline']
+2021-07-04 20:53:34 [scrapy.core.engine] INFO: Spider opened
+2021-07-04 20:53:34 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 20:53:34 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-07-04 20:53:58 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503087-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:00 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502326-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:01 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502320-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:01 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502799-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502890-0-0-0-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:05 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502298-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:06 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502312-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:08 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502327-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:09 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502329-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:10 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502322-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:11 [scrapy.core.scraper] ERROR: Spider error processing <GET https://product.suning.com/0070153176/10061395292.html> (referer: https://list.suning.com/1-503027-0.html)
+Traceback (most recent call last):
+  File "c:\python\python38\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "c:\python\python38\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "c:\python\python38\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\sunshine\PycharmProjects\untitled1\suning_book\suning_book\spiders\suningbook.py", line 71, in parser_detail
+    partNumber=re.findall('\"partNumber\":\"(.*?)\"',url_text,re.S)[0]
+IndexError: list index out of range
+2021-07-04 20:54:11 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503045-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:12 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502307-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:14 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-264008-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:15 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503042-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503041-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503027-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:19 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502324-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 20:54:30 [scrapy.core.scraper] ERROR: Spider error processing <GET https://product.suning.com/0070726642/129634828.html> (referer: https://list.suning.com/1-502324-0.html)
+Traceback (most recent call last):
+  File "c:\python\python38\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "c:\python\python38\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "c:\python\python38\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\sunshine\PycharmProjects\untitled1\suning_book\suning_book\spiders\suningbook.py", line 71, in parser_detail
+    partNumber=re.findall('\"partNumber\":\"(.*?)\"',url_text,re.S)[0]
+IndexError: list index out of range
+2021-07-04 20:54:34 [scrapy.extensions.logstats] INFO: Crawled 64 pages (at 64 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 20:54:40 [scrapy.core.scraper] ERROR: Spider error processing <GET https://product.suning.com/0070153176/140133079.html> (referer: https://list.suning.com/1-502324-0.html)
+Traceback (most recent call last):
+  File "c:\python\python38\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "c:\python\python38\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "c:\python\python38\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\sunshine\PycharmProjects\untitled1\suning_book\suning_book\spiders\suningbook.py", line 71, in parser_detail
+    partNumber=re.findall('\"partNumber\":\"(.*?)\"',url_text,re.S)[0]
+IndexError: list index out of range
+2021-07-04 20:55:34 [scrapy.extensions.logstats] INFO: Crawled 115 pages (at 51 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 20:56:34 [scrapy.extensions.logstats] INFO: Crawled 162 pages (at 47 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 20:57:34 [scrapy.extensions.logstats] INFO: Crawled 210 pages (at 48 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 20:58:34 [scrapy.extensions.logstats] INFO: Crawled 260 pages (at 50 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 20:59:34 [scrapy.extensions.logstats] INFO: Crawled 307 pages (at 47 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 21:00:34 [scrapy.extensions.logstats] INFO: Crawled 358 pages (at 51 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 21:00:35 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/12011794669.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/12011896506.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/12211150426.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/11959074404.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/12013339845.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/11759840144.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:42 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/11759725639.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071434173/12283456622.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070504352/10088545567.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:46 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070726642/107697753.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:47 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070153176/165306375.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070153176/124760297.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:49 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070504352/105245682.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070726642/101836198.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:52 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070726642/108407890.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:52 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070926447/120881325.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070153176/123626813.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:55 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070726642/101951854.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:56 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070607274/107683045.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070153176/101961699.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:58 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071431313/12299868455.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:00:59 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070153176/124935813.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:00 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071303773/646241737.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:01 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070607274/651779776.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:03 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070504352/139119328.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070726642/10076052691.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:06 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071272159/12116620410.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:07 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070504352/10132750834.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:08 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071269006/12244507077.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:09 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071269006/12116791890.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:10 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070607274/603471246.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:11 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070221893/11132483090.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:13 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070153176/101630796.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:14 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070172873/10019002248.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:15 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070221893/10573249051.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:16 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070172873/101603634.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:18 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071272159/12210337481.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:19 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070153176/109234123.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:20 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071321981/12209342689.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070172873/11351653208.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:22 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2021-07-04 21:01:22 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2021-07-04 21:01:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071081321/104032465.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071303773/101738439.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070726642/602269950.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:26 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071397500/12300742552.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071143228/12220600747.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:28 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071397500/12300376316.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:30 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071151794/102518864.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:30 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071303773/123628271.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:32 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071081321/120856677.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:34 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070875897/12281160026.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:34 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070900869/12291160274.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:34 [scrapy.extensions.logstats] INFO: Crawled 409 pages (at 51 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 21:01:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070875897/12280965063.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:37 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071426524/12279374050.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071397500/12300735496.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071151794/165102950.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071151794/121638785.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:01:41 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 167137,
+ 'downloader/request_count': 414,
+ 'downloader/request_method_count/GET': 414,
+ 'downloader/response_bytes': 26332839,
+ 'downloader/response_count': 414,
+ 'downloader/response_status_count/200': 341,
+ 'downloader/response_status_count/403': 56,
+ 'downloader/response_status_count/404': 17,
+ 'elapsed_time_seconds': 486.060232,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2021, 7, 4, 13, 1, 41, 30256),
+ 'httpcompression/response_bytes': 72558841,
+ 'httpcompression/response_count': 324,
+ 'httperror/response_ignored_count': 73,
+ 'httperror/response_ignored_status_count/403': 56,
+ 'httperror/response_ignored_status_count/404': 17,
+ 'log_count/ERROR': 3,
+ 'log_count/INFO': 92,
+ 'offsite/domains': 2,
+ 'offsite/filtered': 324,
+ 'request_depth_max': 3,
+ 'response_received_count': 414,
+ 'scheduler/dequeued': 414,
+ 'scheduler/dequeued/memory': 414,
+ 'scheduler/enqueued': 522,
+ 'scheduler/enqueued/memory': 522,
+ 'spider_exceptions/IndexError': 3,
+ 'start_time': datetime.datetime(2021, 7, 4, 12, 53, 34, 970024)}
+2021-07-04 21:01:41 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2021-07-04 21:04:03 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: suning_book)
+2021-07-04 21:04:03 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:57:54) [MSC v.1924 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2021-07-04 21:04:03 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'suning_book',
+ 'DOWNLOAD_DELAY': 1,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'suning_book.spiders',
+ 'SPIDER_MODULES': ['suning_book.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'}
+2021-07-04 21:04:03 [scrapy.extensions.telnet] INFO: Telnet Password: e57ad20ff92f3baa
+2021-07-04 21:04:03 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-07-04 21:04:04 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-07-04 21:04:04 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-07-04 21:04:04 [scrapy.middleware] INFO: Enabled item pipelines:
+['suning_book.pipelines.SuningBookPipeline']
+2021-07-04 21:04:04 [scrapy.core.engine] INFO: Spider opened
+2021-07-04 21:04:04 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 21:04:04 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-07-04 21:04:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/12184629423.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:28 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070214011/10588213309.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502320-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503045-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:30 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071151794/11838526084.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503041-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070726642/107045194.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:32 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070726642/12121560145.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:33 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-264008-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:33 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503042-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:34 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070083569/131948279.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:34 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503027-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:35 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070726642/129634828.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071336669/12208159744.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-264006-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:37 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502348-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:37 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071336669/12208163974.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502329-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070153176/10720419403.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071151794/649347216.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070129646/11777891968.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502317-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502304-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/10544859955.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502312-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:44 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/10717546152.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:44 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502324-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:44 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071038629/12184592774.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502322-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/12211248930.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:46 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502335-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:47 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070418556/10660585962.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:47 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502341-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/10350203231.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:49 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/11908004083.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:51 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070827066/12245864366.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:51 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/12192029890.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:52 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070157234/11575199527.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:53 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/12093745720.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070858148/11186048340.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:56 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071033287/12102433974.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070067633/10561578715.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:58 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070067633/10561992480.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:04:59 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070129646/12181645567.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:00 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070726642/10929335215.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:02 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070067633/10586549370.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:03 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070926447/12291247800.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:04 [scrapy.extensions.logstats] INFO: Crawled 65 pages (at 65 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 21:05:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071272159/12116307066.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:05 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070129646/12181645277.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:06 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070726642/11930106137.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:07 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070221893/10572745173.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:08 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070129646/12181643178.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:09 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070818798/12205954256.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:11 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071336669/12199938669.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:12 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071068588/11795179785.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:13 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071272159/12189819143.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:15 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070165246/11429933077.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:16 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071065968/11827730582.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:18 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070926447/12287731883.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:18 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070129646/12189192904.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:19 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071033287/12102434116.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070695076/10887980876.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070221893/10571802019.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070214011/11411572391.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071272159/12171589774.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070153176/101852452.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070847771/11787033923.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:28 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070129646/12189192482.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070214011/11855976069.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070418556/11898794389.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:32 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/10403547760.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:33 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070418556/10660767701.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:34 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070418556/11200613745.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070418556/11235568634.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/11907952168.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:37 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070157234/11575397625.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/12259862686.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070157234/11575405609.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070418556/11235587777.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/12193325468.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070896081/12280349492.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:44 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/10683852115.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/12259866716.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:47 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/11917905534.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071065968/11907240194.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:49 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070847771/12090797983.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:51 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/10680424220.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:52 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/12184649662.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:53 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070726642/169426960.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071033287/12274362335.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:56 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070153176/12020823736.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070067633/12116105214.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:58 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070176648/10057676713.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:05:59 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070129646/11780187810.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:00 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071033287/12093654914.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:01 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071161481/12190304933.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:02 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071033287/12111536337.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:03 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070418556/10918196506.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:04 [scrapy.extensions.logstats] INFO: Crawled 116 pages (at 51 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 21:06:05 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071033287/12093659466.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:06 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070067633/10561863011.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:07 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071303773/10794048016.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:08 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070912246/12293889111.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:10 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071333288/12196069245.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:11 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070153176/12182996480.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:12 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/10397712472.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:13 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070418556/11684301492.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:14 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071068588/11795189098.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:15 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070847771/11266203253.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:16 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071062099/11668286542.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071303773/11933339978.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:06:18 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2021-07-04 21:06:18 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2021-07-04 21:06:18 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2021-07-04 21:06:51 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: suning_book)
+2021-07-04 21:06:51 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:57:54) [MSC v.1924 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2021-07-04 21:06:51 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'suning_book',
+ 'DOWNLOAD_DELAY': 1,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'suning_book.spiders',
+ 'SPIDER_MODULES': ['suning_book.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'}
+2021-07-04 21:06:51 [scrapy.extensions.telnet] INFO: Telnet Password: 6ac4f199f8326706
+2021-07-04 21:06:51 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-07-04 21:06:51 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-07-04 21:06:51 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-07-04 21:06:51 [scrapy.middleware] INFO: Enabled item pipelines:
+['suning_book.pipelines.SuningBookPipeline']
+2021-07-04 21:06:51 [scrapy.core.engine] INFO: Spider opened
+2021-07-04 21:06:51 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 21:06:51 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-07-04 21:07:14 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502320-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:15 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502335-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:16 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502890-0-0-0-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502326-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:18 [scrapy.core.scraper] ERROR: Spider error processing <GET https://product.suning.com/0070726642/129634828.html> (referer: https://list.suning.com/1-502324-0.html)
+Traceback (most recent call last):
+  File "c:\python\python38\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "c:\python\python38\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "c:\python\python38\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "c:\python\python38\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\python\python38\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\sunshine\PycharmProjects\untitled1\suning_book\suning_book\spiders\suningbook.py", line 71, in parser_detail
+    partNumber=re.findall(r'"partNumber":"(.*?)"',url_text,re.S)[0]
+IndexError: list index out of range
+2021-07-04 21:07:18 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502799-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:19 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070083569/131948279.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:20 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503087-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071336669/12208163974.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502298-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502307-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071151794/649347216.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502312-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071151794/649090232.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502327-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071151794/11841113193.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502329-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502322-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503045-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:30 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070153176/140133079.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:30 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503042-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070233302/10597482709.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503041-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:32 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503027-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:34 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502324-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:35 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071151794/11839519976.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070067633/10561645280.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071272159/12116636702.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070067633/12111028842.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070091633/12191817228.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:42 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071143228/12194526281.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:46 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071161481/12195943996.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:47 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071426524/12287705920.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071038629/12077059987.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:51 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0071233557/12294459484.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:51 [scrapy.extensions.logstats] INFO: Crawled 64 pages (at 64 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 21:07:55 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070504352/10094798744.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://product.suning.com/0070213869/10583270675.html>: HTTP status code is not handled or not allowed
+2021-07-04 21:07:58 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2021-07-04 21:07:58 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2021-07-04 21:07:58 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2021-07-04 21:18:11 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: suning_book)
+2021-07-04 21:18:11 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:57:54) [MSC v.1924 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2021-07-04 21:18:11 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'suning_book',
+ 'DOWNLOAD_DELAY': 1,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'suning_book.spiders',
+ 'SPIDER_MODULES': ['suning_book.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'}
+2021-07-04 21:18:11 [scrapy.extensions.telnet] INFO: Telnet Password: deb635e3022dac80
+2021-07-04 21:18:11 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-07-04 21:18:11 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-07-04 21:18:11 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-07-04 21:18:11 [scrapy.middleware] INFO: Enabled item pipelines:
+['suning_book.pipelines.SuningBookPipeline']
+2021-07-04 21:18:11 [scrapy.core.engine] INFO: Spider opened
+2021-07-04 21:18:11 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 21:18:11 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-07-04 21:18:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502799-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:37 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502298-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:37 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502307-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502312-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502327-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502329-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502322-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503045-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:44 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503042-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:46 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503041-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:47 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503027-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-264008-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-264006-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502348-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:52 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502324-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:53 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502308-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:18:55 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502317-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:19:11 [scrapy.extensions.logstats] INFO: Crawled 64 pages (at 64 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 21:19:13 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2021-07-04 21:19:13 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2021-07-04 21:19:13 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2021-07-04 21:27:56 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: suning_book)
+2021-07-04 21:27:56 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:57:54) [MSC v.1924 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.2, Platform Windows-10-10.0.19041-SP0
+2021-07-04 21:27:56 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'suning_book',
+ 'DOWNLOAD_DELAY': 1,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'suning_book.spiders',
+ 'SPIDER_MODULES': ['suning_book.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'}
+2021-07-04 21:27:56 [scrapy.extensions.telnet] INFO: Telnet Password: 85fd93d4fb5a70ad
+2021-07-04 21:27:56 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-07-04 21:27:57 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-07-04 21:27:57 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-07-04 21:27:57 [scrapy.middleware] INFO: Enabled item pipelines:
+['suning_book.pipelines.SuningBookPipeline']
+2021-07-04 21:27:57 [scrapy.core.engine] INFO: Spider opened
+2021-07-04 21:27:57 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 21:27:57 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-07-04 21:28:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502312-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502327-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502320-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502329-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502322-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:26 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503045-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503042-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503041-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:30 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-503027-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:32 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-264008-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:32 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-264006-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:33 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502348-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:35 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502324-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502308-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:37 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502317-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502304-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://list.suning.com/1-502341-0.html&paging=1&sub=0>: HTTP status code is not handled or not allowed
+2021-07-04 21:28:56 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2021-07-04 21:28:56 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2021-07-04 21:28:57 [scrapy.extensions.logstats] INFO: Crawled 64 pages (at 64 pages/min), scraped 0 items (at 0 items/min)
+2021-07-04 21:28:58 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
